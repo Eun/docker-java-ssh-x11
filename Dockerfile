@@ -2,7 +2,7 @@
 #     docker run --rm -ti -v $(pwd):/app/ eunts/java-ssh-x11:latest
 # to run
 
-FROM openjdk:latest
+FROM openjdk:slim-buster
 
 COPY run.sh /bin/run
 
