@@ -37,5 +37,6 @@ RUN apt-get update && \
     echo "Compression no"                                >> /etc/ssh/sshd_config && \
     mkdir /var/run/sshd
 
+ENV PATH $PATH:/usr/java/openjdk-13/bin/
 EXPOSE 22
 ENTRYPOINT [ "run", "/usr/sbin/sshd", "-D", "-f", "/etc/ssh/sshd_config" ]
