@@ -36,7 +36,9 @@ RUN apt-get update && \
     sed -ri 's/^\s*(Compression)/#\1/'                      /etc/ssh/sshd_config && \
     echo "Compression no"                                >> /etc/ssh/sshd_config && \
     mkdir /var/run/sshd                                                          && \
-    echo "export PATH=\$PATH:/usr/java/openjdk-13/bin/"   >> /etc/profile
+    echo "export PATH=\$PATH:/usr/java/openjdk-13/bin/"   >> /etc/profile        && \
+    echo "export JAVA_INCLUDE_PATH=/usr/java/openjdk-13/include/" >> /etc/profile && \
+    echo "export JAVA_HOME_PATH=/usr/java/openjdk-13/" >> /etc/profile
 
 
 EXPOSE 22
