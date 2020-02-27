@@ -38,7 +38,7 @@ RUN apt-get update && \
     mkdir /var/run/sshd                                                          && \
     echo "export PATH=\$PATH:/usr/java/openjdk-13/bin/"   >> /etc/profile        && \
     echo "export JAVA_INCLUDE_PATH=/usr/java/openjdk-13/include/" >> /etc/profile && \
-    echo "export JAVA_HOME_PATH=/usr/java/openjdk-13/" >> /etc/profile
+    echo "export JAVA_HOME=/usr/java/openjdk-13/" >> /etc/profile
 
 
 EXPOSE 22
